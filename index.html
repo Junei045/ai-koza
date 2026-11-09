@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI講座 練習材料</title>
+<style>
+  :root {
+    --bg: #f6f7f4;
+    --card: #ffffff;
+    --ink: #1f2a24;
+    --muted: #5b6660;
+    --line: #d9ddd6;
+    --accent: #2f6b4f;
+    --accent-ink: #ffffff;
+    --soft: #eaf2ec;
+    --note: #fff7e0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "BIZ UDPGothic", "Meiryo", "Hiragino Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  header h1 { font-size: 1.5rem; margin: 0 0 4px; line-height: 1.4; }
+  header p { margin: 0; color: var(--muted); }
+  .howto {
+    background: var(--note);
+    border: 1px solid #ecd9a0;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 20px 0 8px;
+  }
+  .howto h2 { font-size: 1.1rem; margin: 0 0 6px; }
+  .howto ol { margin: 0; padding-left: 1.4em; }
+  .howto p { margin: 8px 0 0; font-size: 0.95rem; }
+  kbd {
+    display: inline-block;
+    border: 1px solid #b9b39c;
+    border-bottom-width: 2px;
+    border-radius: 4px;
+    padding: 0 6px;
+    font-family: inherit;
+    font-size: 0.9em;
+    background: #fff;
+    line-height: 1.5;
+  }
+  nav { margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  nav a {
+    text-decoration: none;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.95rem;
+  }
+  nav a:hover { background: var(--soft); }
+  h2.round {
+    font-size: 1.25rem;
+    margin: 40px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--accent);
+  }
+  section.ex {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 0 0 20px;
+  }
+  section.ex h3 { font-size: 1.1rem; margin: 0 0 4px; line-height: 1.5; }
+  .page { color: var(--muted); font-size: 0.9rem; font-weight: normal; }
+  .block { margin-top: 16px; }
+  .label { font-weight: bold; font-size: 0.95rem; color: var(--accent); }
+  .text {
+    white-space: pre-wrap;
+    background: var(--soft);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 4px 0 8px;
+  }
+  .text.material { background: #f2f2ef; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  button.copy {
+    font: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid var(--accent);
+    background: #fff;
+    color: var(--accent);
+    border-radius: 8px;
+    padding: 6px 16px;
+  }
+  button.copy.main {
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: bold;
+    padding: 8px 18px;
+  }
+  button.copy:hover { filter: brightness(0.95); }
+  button.copy.done { background: #e3f1e7; color: var(--accent); border-color: var(--accent); }
+  .bundle {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+  }
+  .bundle small { color: var(--muted); display: block; margin-top: 4px; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+  @media print {
+    nav, button.copy, .bundle { display: none; }
+    body { background: #fff; }
+    section.ex { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>AI講座 練習材料（貼り付け用）</h1>
+  <p>地域ケアプラザ職員向け「自分の業務を1つ、Copilotで楽にしてみる」</p>
+</header>
+
+<div class="howto">
+  <h2>使い方</h2>
+  <ol>
+    <li>使いたい文の下にある「コピー」ボタンを押します。</li>
+    <li>Copilotの入力欄をクリックし、<kbd>Ctrl</kbd> + <kbd>V</kbd> で貼り付けます。</li>
+    <li>材料がある練習は「頼み文と材料をまとめてコピー」を押すと、1回の貼り付けで送信できる形になります。</li>
+    <li>練習が変わったら、Copilotで「新しいチャット」を開きます。</li>
+  </ol>
+  <p>自分で入力欄に書き足すときは、<kbd>Enter</kbd> だけを押すと途中で送信されます。改行は <kbd>Shift</kbd> + <kbd>Enter</kbd> です。</p>
+  <p>※ ここにある文章はすべて練習用の架空のものです。</p>
+</div>
+
+<nav>
+  <a href="#r1-1">第1回 練習1</a>
+  <a href="#r1-2">第1回 練習2</a>
+  <a href="#r1-3">第1回 練習3</a>
+  <a href="#r1-4">第1回 業務を選ぶ</a>
+  <a href="#r2-1">第2回 会議メモ</a>
+  <a href="#r2-2">第2回 Outlook返信</a>
+  <a href="#r2-3">第2回 組み立て例B</a>
+</nav>
+
+<!-- ===================== 第1回 ===================== -->
+<h2 class="round">第1回</h2>
+
+<section class="ex" id="r1-1">
+  <h3>練習1　長い回覧文を短くする <span class="page">（テキスト5ページ）</span></h3>
+
+  <div class="block">
+    <div class="label">段階1の頼み文</div>
+    <div class="text" id="t1-1a">下の回覧文の要点だけを、箇条書きにしてください。まだ文章にはしないでください。</div>
+    <div class="row"><button class="copy" data-copy="t1-1a">頼み文をコピー</button></div>
+  </div>
+
+  <div class="block">
+    <div class="label">材料：架空の回覧文</div>
+    <div class="text material" id="t1-1m">各位　日頃より地域活動へのご協力ありがとうございます。来月の清掃活動を下記のとおり実施しますので、ご都合のつく方はご参加ください。当日は軍手と飲み物をご持参ください。雨天の場合は翌週に延期し、前日夕方までに掲示板と回覧でお知らせします。集合場所はプラザ正面玄関前、集合時間は午前9時です。体調のすぐれない方は無理をなさらないでください。</div>
+    <div class="row"><button class="copy" data-copy="t1-1m">材料をコピー</button></div>
+  </div>
+
+  <div class="bundle">
+    <button class="copy main" data-copy="t1-1a t1-1m">段階1：頼み文と材料をまとめてコピー</button>
+    <small>貼り付けたら、そのまま送信できます。</small>
+  </div>
+
+  <div class="block">
+    <div class="label">段階2の頼み文</div>
+    <div class="text" id="t1-1b">この要点をもとに、3行で伝わる短い文にしてください。集合時間と集合場所は必ず入れてください。</div>
+    <div class="row"><button class="copy" data-copy="t1-1b">段階2の頼み文をコピー</button></div>
+  </div>
+</section>
+
+<section class="ex" id="r1-2">
+  <h3>練習2　かたい案内文をやさしくする <span class="page">（テキスト6ページ）</span></h3>
+
+  <div class="block">
+    <div class="label">段階1の頼み文</div>
+    <div class="text" id="t1-2a">下の案内文を読んで、読み手が知りたいことを、知りたい順に並べてください。まだ文章にはしないでください。</div>
+    <div class="row"><button class="copy" data-copy="t1-2a">頼み文をコピー</button></div>
+  </div>
+
+  <div class="block">
+    <div class="label">材料：架空の案内文</div>
+    <div class="text material" id="t1-2m">「健康体操教室」参加者募集。対象は65歳以上の方です。開催日時は12月12日（土）午前10時から11時30分まで、会場は2階多目的室です。参加費は無料です。申込は12月5日（土）までに窓口または電話でお願いします。定員20名、先着順です。動きやすい服装でお越しください。</div>
+    <div class="row"><button class="copy" data-copy="t1-2m">材料をコピー</button></div>
+  </div>
+
+  <div class="bundle">
+    <button class="copy main" data-copy="t1-2a t1-2m">段階1：頼み文と材料をまとめてコピー</button>
+    <small>貼り付けたら、そのまま送信できます。</small>
+  </div>
+
+  <div class="block">
+    <div class="label">段階2の頼み文</div>
+    <div class="text" id="t1-2b">高齢の方にも分かりやすい言葉に言い換えてください。日時・場所・申込の締め切りは変えないでください。</div>
+    <div class="row"><button class="copy" data-copy="t1-2b">段階2の頼み文をコピー</button></div>
+  </div>
+</section>
+
+<section class="ex" id="r1-3">
+  <h3>練習3　アイデアを出してもらう <span class="page">（テキスト6ページ）</span></h3>
+
+  <div class="block">
+    <div class="label">段階1の頼み文</div>
+    <div class="text" id="t1-3a">地域の高齢の方が気軽に参加できる、30分程度の小さな集まりのアイデアを5つ出してください。準備が簡単なものを優先してください。</div>
+    <div class="row"><button class="copy main" data-copy="t1-3a">段階1の頼み文をコピー</button></div>
+  </div>
+
+  <div class="block">
+    <div class="label">段階2の頼み文</div>
+    <div class="text" id="t1-3b">5つのアイデアそれぞれについて、必要な準備物と、準備にかかる時間の目安を表にしてください。</div>
+    <div class="row"><button class="copy" data-copy="t1-3b">段階2の頼み文をコピー</button></div>
+  </div>
+</section>
+
+<section class="ex" id="r1-4">
+  <h3>自分の業務を選ぶ <span class="page">（テキスト7ページ）</span></h3>
+
+  <div class="block">
+    <div class="label">思いつかないときの頼み文</div>
+    <div class="text" id="t1-4a">地域ケアプラザの職員が日ごろ書いている文章には、どんなものがありますか。個人情報を扱わないものを、例として10個挙げてください。</div>
+    <div class="row"><button class="copy main" data-copy="t1-4a">頼み文をコピー</button></div>
+  </div>
+</section>
+
+<!-- ===================== 第2回 ===================== -->
+<h2 class="round">第2回</h2>
+
+<section class="ex" id="r2-1">
+  <h3>会議メモから連絡文を作る <span class="page">（テキスト9ページ）</span></h3>
+
+  <div class="block">
+    <div class="label">段階1の頼み文</div>
+    <div class="text" id="t2-1a">下のメモから、「決まったこと」「やること（担当・期限）」「まだ決まっていないこと」の3つに分けて、表にしてください。</div>
+    <div class="row"><button class="copy" data-copy="t2-1a">頼み文をコピー</button></div>
+  </div>
+
+  <div class="block">
+    <div class="label">材料：架空の会議メモ</div>
+    <div class="text material" id="t2-1m">11月24日（火）地域防災ミニ講座 準備打合せ。参加：職員2名、地区の防災担当1名。講座は1月16日（土）午前10時から11時まで、会場は2階多目的室。チラシの原稿は鈴木（仮名）が12月18日（金）までに作る。非常食の試食を入れるかどうかは、予算を確認してから決める。申込の締め切りは1月9日（土）。次回打合せは12月22日（火）午後2時。</div>
+    <div class="row"><button class="copy" data-copy="t2-1m">材料をコピー</button></div>
+  </div>
+
+  <div class="bundle">
+    <button class="copy main" data-copy="t2-1a t2-1m">段階1：頼み文と材料をまとめてコピー</button>
+    <small>貼り付けたら、そのまま送信できます。</small>
+  </div>
+
+  <div class="block">
+    <div class="label">段階2の頼み文</div>
+    <div class="text" id="t2-1b">この表をもとに、打合せに参加した3名への連絡文の下書きを作ってください。まだ決まっていないことは「未定」とはっきり書いてください。</div>
+    <div class="row"><button class="copy" data-copy="t2-1b">段階2の頼み文をコピー</button></div>
+  </div>
+</section>
+
+<section class="ex" id="r2-2">
+  <h3>Outlookで返信を下書きする <span class="page">（テキスト11ページ）</span></h3>
+
+  <div class="block">
+    <div class="label">材料：架空の問い合わせメール</div>
+    <div class="text material" id="t2-2m">件名：体操教室の申込について
+初めて参加します。持ち物はありますか。また、途中からの参加でも大丈夫でしょうか。</div>
+    <div class="row"><button class="copy" data-copy="t2-2m">材料をコピー</button></div>
+  </div>
+
+  <div class="block">
+    <div class="label">頼み文</div>
+    <div class="text" id="t2-2a">この問い合わせへの返信の下書きを作ってください。持ち物は「動きやすい服装と飲み物」、途中参加は「大丈夫ですが、開始10分前までにお越しください」と伝えてください。丁寧な言葉で書いてください。送信はまだしません。</div>
+    <div class="row"><button class="copy main" data-copy="t2-2a">頼み文をコピー</button></div>
+  </div>
+</section>
+
+<section class="ex" id="r2-3">
+  <h3>組み立て例B（項目に分けて書く頼み文の型） <span class="page">（テキスト8ページ）</span></h3>
+
+  <div class="block">
+    <div class="label">頼み文の型</div>
+    <div class="text" id="t2-3a">次の条件で、案内文の下書きを作ってください。
+【目的】地域の方が申込の方法で迷わないように
+【読み手】初めて参加する高齢の方
+【制約】日時と場所は変えない。200字以内
+【基準】日時と場所が最初に分かること
+【材料】</div>
+    <div class="row"><button class="copy main" data-copy="t2-3a">型をコピー</button></div>
+    <small style="color:var(--muted)">貼り付けたあと、【材料】の下に <kbd>Shift</kbd> + <kbd>Enter</kbd> で改行して、自分のメモを貼ってから送信します。</small>
+  </div>
+</section>
+
+<footer>
+  ※ ここにある文章はすべて練習用の架空のものです。
+</footer>
+
+</div>
+
+<script>
+  function fallbackCopy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.top = "-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+
+  function showDone(btn, ok) {
+    var original = btn.getAttribute("data-label") || btn.textContent;
+    btn.setAttribute("data-label", original);
+    btn.textContent = ok ? "コピーしました ✓" : "コピーできませんでした";
+    btn.classList.add("done");
+    setTimeout(function () {
+      btn.textContent = original;
+      btn.classList.remove("done");
+    }, 2000);
+  }
+
+  document.querySelectorAll("button.copy").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var ids = btn.getAttribute("data-copy").split(" ");
+      var text = ids.map(function (id) {
+        return document.getElementById(id).textContent.trim();
+      }).join("\n\n");
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(
+          function () { showDone(btn, true); },
+          function () { showDone(btn, fallbackCopy(text)); }
+        );
+      } else {
+        showDone(btn, fallbackCopy(text));
+      }
+    });
+  });
+</script>
+</body>
+</html>
