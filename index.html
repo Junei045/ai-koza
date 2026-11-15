@@ -108,7 +108,18 @@
     padding-top: 14px;
     border-top: 1px dashed var(--line);
   }
+  small { font-size: 0.9rem; }
   .bundle small { color: var(--muted); display: block; margin-top: 4px; }
+  .retry {
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: var(--note);
+    border: 1px solid #ecd9a0;
+    border-radius: 8px;
+  }
+  .retry .label { color: #7a5a10; }
+  .retry .when { margin-top: 10px; font-size: 0.95rem; color: var(--muted); }
+  .retry .text { background: #fff; margin-bottom: 6px; }
   footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
   @media print {
     nav, button.copy, .bundle { display: none; }
@@ -175,6 +186,19 @@
     <div class="text" id="t1-1b">この要点をもとに、3行で伝わる短い文にしてください。集合時間と集合場所は必ず入れてください。</div>
     <div class="row"><button class="copy" data-copy="t1-1b">段階2の頼み文をコピー</button></div>
   </div>
+
+  <div class="retry">
+    <div class="label">うまくいかないときの頼み直し</div>
+    <div class="when">3行より長いとき</div>
+    <div class="text" id="t1-1r1">1行を短くして、3行以内にしてください。</div>
+    <div class="row"><button class="copy" data-copy="t1-1r1">頼み直しをコピー</button></div>
+    <div class="when">雨の日のことが抜けたとき</div>
+    <div class="text" id="t1-1r2">雨の日の扱いも入れてください。</div>
+    <div class="row"><button class="copy" data-copy="t1-1r2">頼み直しをコピー</button></div>
+    <div class="when">日付が勝手に入ったとき</div>
+    <div class="text" id="t1-1r3">実施日は書かずに「来月」のままにしてください。</div>
+    <div class="row"><button class="copy" data-copy="t1-1r3">頼み直しをコピー</button></div>
+  </div>
 </section>
 
 <section class="ex" id="r1-2">
@@ -201,6 +225,16 @@
     <div class="label">段階2の頼み文</div>
     <div class="text" id="t1-2b">高齢の方にも分かりやすい言葉に言い換えてください。日時・場所・申込の締め切りは変えないでください。</div>
     <div class="row"><button class="copy" data-copy="t1-2b">段階2の頼み文をコピー</button></div>
+  </div>
+
+  <div class="retry">
+    <div class="label">うまくいかないときの頼み直し</div>
+    <div class="when">申込の方法が分かりにくいとき</div>
+    <div class="text" id="t1-2r1">申込の方法と締め切りを、いちばん最初に書いてください。</div>
+    <div class="row"><button class="copy" data-copy="t1-2r1">頼み直しをコピー</button></div>
+    <div class="when">文が長くて読みにくいとき</div>
+    <div class="text" id="t1-2r2">1つの文を短くして、箇条書きを使ってください。</div>
+    <div class="row"><button class="copy" data-copy="t1-2r2">頼み直しをコピー</button></div>
   </div>
 </section>
 
