@@ -109,6 +109,7 @@
     border-top: 1px dashed var(--line);
   }
   small { font-size: 0.9rem; }
+  section.ex > p { margin: 8px 0 0; }
   .bundle small { color: var(--muted); display: block; margin-top: 4px; }
   .retry {
     margin-top: 16px;
@@ -153,16 +154,16 @@
   <a href="#r1-2">第1回 練習2</a>
   <a href="#r1-3">第1回 練習3</a>
   <a href="#r1-4">第1回 業務を選ぶ</a>
-  <a href="#r2-1">第2回 会議メモ</a>
-  <a href="#r2-2">第2回 Outlook返信</a>
-  <a href="#r2-3">第2回 組み立て例B</a>
+  <a href="#r2-1">第2回 間違い探し</a>
+  <a href="#r2-2">第2回 1枚マニュアル</a>
+  <a href="#r2-3">第2回 項目に分けて頼む型</a>
 </nav>
 
 <!-- ===================== 第1回 ===================== -->
 <h2 class="round">第1回</h2>
 
 <section class="ex" id="r1-1">
-  <h3>練習1　長い回覧文を短くする <span class="page">（テキスト5ページ）</span></h3>
+  <h3>練習1　長い回覧文を短くする <span class="page">（第1回テキスト5ページ）</span></h3>
 
   <div class="block">
     <div class="label">段階1の頼み文</div>
@@ -202,7 +203,7 @@
 </section>
 
 <section class="ex" id="r1-2">
-  <h3>練習2　かたい案内文をやさしくする <span class="page">（テキスト6ページ）</span></h3>
+  <h3>練習2　かたい案内文をやさしくする <span class="page">（第1回テキスト6ページ）</span></h3>
 
   <div class="block">
     <div class="label">段階1の頼み文</div>
@@ -239,7 +240,7 @@
 </section>
 
 <section class="ex" id="r1-3">
-  <h3>練習3　アイデアを出してもらう <span class="page">（テキスト6ページ）</span></h3>
+  <h3>練習3　アイデアを出してもらう <span class="page">（第1回テキスト6ページ）</span></h3>
 
   <div class="block">
     <div class="label">段階1の頼み文</div>
@@ -255,7 +256,7 @@
 </section>
 
 <section class="ex" id="r1-4">
-  <h3>自分の業務を選ぶ <span class="page">（テキスト7ページ）</span></h3>
+  <h3>自分の業務を選ぶ <span class="page">（第1回テキスト7ページ）</span></h3>
 
   <div class="block">
     <div class="label">思いつかないときの頼み文</div>
@@ -268,63 +269,101 @@
 <h2 class="round">第2回</h2>
 
 <section class="ex" id="r2-1">
-  <h3>会議メモから連絡文を作る <span class="page">（テキスト9ページ）</span></h3>
-
+  <h3>練習　AIが作った手順書の間違いを探す <span class="page">（第2回テキスト6ページ）</span></h3>
+  <p>まず、テキストを見ながら人が探します。探し終わってから、Copilotにも見比べてもらいます。</p>
   <div class="block">
-    <div class="label">段階1の頼み文</div>
-    <div class="text" id="t2-1a">下のメモから、「決まったこと」「やること（担当・期限）」「まだ決まっていないこと」の3つに分けて、表にしてください。</div>
+    <div class="label">材料：元のメモ（架空）</div>
+    <div class="text material" id="t2-1m">【メモ】
+サロン当日の受付準備（メモ）
+・午後1時までに、受付机を玄関横に出す
+・受付は2名
+・名簿は使わない。来た方に、名札シールに名前を書いて胸に貼ってもらう
+・午後1時15分に、お茶用のお湯を沸かす
+・終わったら、机を倉庫に戻す。残った名札シールは事務室の引き出しへ</div>
+    <div class="row"><button class="copy" data-copy="t2-1m">材料をコピー</button></div>
+  </div>
+  <div class="block">
+    <div class="label">材料：AIが作った手順書（架空）</div>
+    <div class="text material" id="t2-1d">【手順書】
+サロン当日　受付準備の手順
+1. 午後1時30分までに、受付机を玄関横に出します。
+2. 受付は2名で行います。
+3. 来た方に、名簿へお名前と電話番号を書いていただきます。
+4. 名札シールにお名前を書いて、胸に貼っていただきます。
+5. 午後1時15分に、お茶用のお湯を沸かします。
+6. 雨の日は、会場を2階多目的室に変更します。</div>
+    <div class="row"><button class="copy" data-copy="t2-1d">材料をコピー</button></div>
+  </div>
+  <div class="block">
+    <div class="label">見比べの頼み文</div>
+    <div class="text" id="t2-1a">下の「メモ」と「手順書」を見比べてください。メモにないことが足されているところと、メモにあるのに抜けているところを、それぞれ一覧にしてください。</div>
     <div class="row"><button class="copy" data-copy="t2-1a">頼み文をコピー</button></div>
   </div>
 
-  <div class="block">
-    <div class="label">材料：架空の会議メモ</div>
-    <div class="text material" id="t2-1m">11月24日（火）地域防災ミニ講座 準備打合せ。参加：職員2名、地区の防災担当1名。講座は1月16日（土）午前10時から11時まで、会場は2階多目的室。チラシの原稿は鈴木（仮名）が12月18日（金）までに作る。非常食の試食を入れるかどうかは、予算を確認してから決める。申込の締め切りは1月9日（土）。次回打合せは12月22日（火）午後2時。</div>
-    <div class="row"><button class="copy" data-copy="t2-1m">材料をコピー</button></div>
-  </div>
-
   <div class="bundle">
-    <button class="copy main" data-copy="t2-1a t2-1m">段階1：頼み文と材料をまとめてコピー</button>
+    <button class="copy main" data-copy="t2-1a t2-1m t2-1d">見比べ：頼み文とメモと手順書をまとめてコピー</button>
     <small>貼り付けたら、そのまま送信できます。</small>
-  </div>
-
-  <div class="block">
-    <div class="label">段階2の頼み文</div>
-    <div class="text" id="t2-1b">この表をもとに、打合せに参加した3名への連絡文の下書きを作ってください。まだ決まっていないことは「未定」とはっきり書いてください。</div>
-    <div class="row"><button class="copy" data-copy="t2-1b">段階2の頼み文をコピー</button></div>
   </div>
 </section>
 
 <section class="ex" id="r2-2">
-  <h3>Outlookで返信を下書きする <span class="page">（テキスト11ページ）</span></h3>
-
+  <h3>実習　自分の業務の1枚マニュアルを作る <span class="page">（第2回テキスト8ページ）</span></h3>
+  <p>頼み文をコピーして貼り付けたら、<kbd>Shift</kbd> + <kbd>Enter</kbd> で改行して、自分の手順メモを打ち込んでから送信します。手順メモに、人の名前や利用者・相談者の情報は書きません。</p>
   <div class="block">
-    <div class="label">材料：架空の問い合わせメール</div>
-    <div class="text material" id="t2-2m">件名：体操教室の申込について
-初めて参加します。持ち物はありますか。また、途中からの参加でも大丈夫でしょうか。</div>
-    <div class="row"><button class="copy" data-copy="t2-2m">材料をコピー</button></div>
+    <div class="label">段階1（整理）の頼み文</div>
+    <div class="text" id="t2-2a">下のメモは、私の業務の手順です。抜けていそうな手順や、はっきりしないところを、質問の形で5つまで挙げてください。まだ文章にはしないでください。</div>
+    <div class="row"><button class="copy main" data-copy="t2-2a">段階1の頼み文をコピー</button></div>
+  </div>
+  <div class="block">
+    <div class="label">質問に答えるときの頼み文</div>
+    <div class="text" id="t2-2q">質問への答えです。この答えも材料に加えてください。</div>
+    <div class="row"><button class="copy" data-copy="t2-2q">答えの頼み文をコピー</button></div>
+  </div>
+  <small style="color:var(--muted)">貼り付けたあと、<kbd>Shift</kbd> + <kbd>Enter</kbd> で改行して、質問への答えを自分で打ち込みます。</small>
+  <div class="block">
+    <div class="label">段階2（構成）の頼み文</div>
+    <div class="text" id="t2-2b">この手順を、初めてこの業務をする職員向けの1枚マニュアルにします。入れる見出しだけを並べてください。</div>
+    <div class="row"><button class="copy" data-copy="t2-2b">段階2の頼み文をコピー</button></div>
+  </div>
+  <div class="block">
+    <div class="label">段階3（下書き）の頼み文</div>
+    <div class="text" id="t2-2c">その見出しで、マニュアルの下書きを作ってください。手順には番号を付け、1つの番号には1つの動作だけを書いてください。メモにないことは足さないでください。時刻・数字・場所は変えないでください。</div>
+    <div class="row"><button class="copy" data-copy="t2-2c">段階3の頼み文をコピー</button></div>
+  </div>
+  <div class="block">
+    <div class="label">段階4（整える）の頼み文</div>
+    <div class="text" id="t2-2d">A4の1枚に収まるように短くしてください。1つの文を短く、やさしい言葉にしてください。</div>
+    <div class="row"><button class="copy" data-copy="t2-2d">段階4の頼み文をコピー</button></div>
   </div>
 
-  <div class="block">
-    <div class="label">頼み文</div>
-    <div class="text" id="t2-2a">この問い合わせへの返信の下書きを作ってください。持ち物は「動きやすい服装と飲み物」、途中参加は「大丈夫ですが、開始10分前までにお越しください」と伝えてください。丁寧な言葉で書いてください。送信はまだしません。</div>
-    <div class="row"><button class="copy main" data-copy="t2-2a">頼み文をコピー</button></div>
+  <div class="retry">
+    <div class="label">うまくいかないときの頼み直し</div>
+    <div class="when">長すぎるとき</div>
+    <div class="text" id="t2-2r1">手順を10個以内にまとめてください。</div>
+    <div class="row"><button class="copy" data-copy="t2-2r1">頼み直しをコピー</button></div>
+    <div class="when">メモにない手順が足されたとき</div>
+    <div class="text" id="t2-2r2">メモにない手順は消してください。</div>
+    <div class="row"><button class="copy" data-copy="t2-2r2">頼み直しをコピー</button></div>
+    <div class="when">言葉がかたいとき</div>
+    <div class="text" id="t2-2r3">初めての人にも分かる、やさしい言葉にしてください。</div>
+    <div class="row"><button class="copy" data-copy="t2-2r3">頼み直しをコピー</button></div>
   </div>
+  <p><small style="color:var(--muted)">名前などの個人情報が入ってしまったときは、頼み直しをせず、新しいチャットを開いて、材料から名前を消して入れ直します。</small></p>
 </section>
 
 <section class="ex" id="r2-3">
-  <h3>組み立て例B（項目に分けて書く頼み文の型） <span class="page">（テキスト8ページ）</span></h3>
-
+  <h3>項目に分けて頼む型（1枚マニュアル用）</h3>
   <div class="block">
     <div class="label">頼み文の型</div>
-    <div class="text" id="t2-3a">次の条件で、案内文の下書きを作ってください。
-【目的】地域の方が申込の方法で迷わないように
-【読み手】初めて参加する高齢の方
-【制約】日時と場所は変えない。200字以内
-【基準】日時と場所が最初に分かること
+    <div class="text" id="t2-3a">次の条件で、1枚マニュアルの下書きを作ってください。
+【目的】初めての人が、この作業を一人でできるように
+【読み手】初めてこの業務を担当する職員
+【制約】メモにないことは足さない。時刻・数字・場所は変えない。A4の1枚
+【基準】手順に番号があり、1つの番号に1つの動作
 【材料】</div>
     <div class="row"><button class="copy main" data-copy="t2-3a">型をコピー</button></div>
-    <small style="color:var(--muted)">貼り付けたあと、【材料】の下に <kbd>Shift</kbd> + <kbd>Enter</kbd> で改行して、自分のメモを貼ってから送信します。</small>
   </div>
+  <small style="color:var(--muted)">貼り付けたあと、【材料】の下に <kbd>Shift</kbd> + <kbd>Enter</kbd> で改行して、自分の手順メモを打ち込んでから送信します。</small>
 </section>
 
 <footer>
